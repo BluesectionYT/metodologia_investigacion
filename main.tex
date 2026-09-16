@@ -1,0 +1,159 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage[
+    top=3cm,
+    left=4cm,
+    bottom=3cm,
+    right=2cm
+]{geometry}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{mathptmx} 
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup{font=small, labelfont=bf}
+
+\usepackage[backend=biber, style=numeric, sorting=none]{biblatex}
+\addbibresource{references.bib}   
+
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\bfseries\large}{\thesection.}{1em}{\MakeUppercase}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection}{1em}{\MakeUppercase}
+\titleformat{\subsubsection}{\normalfont\bfseries\normalsize}{\thesubsubsection}{1em}{\MakeUppercase}
+
+\begin{document}
+\begin{titlepage}
+    \thispagestyle{empty}
+    \centering
+    \vspace*{2cm}
+    {\LARGE \textbf{CHATBOTS CONVERSACIONALES VS. FORMULARIOS TRADICIONALES EN LA UPTC}}\\[3cm]
+    {\large Edwin David Fino Velandia\\ Edward Mauricio Guatibonza Suárez\\ Fredy Alejandro Bonilla Rodríguez}\\[2cm]
+    {\large Universidad Pedagógica y Tecnológica de Colombia (UPTC)}\\
+    {\large Facultad de Ingeniería}\\
+    {\large Escuela de Ingeniería de Sistemas y Computación}\\[2cm]
+    {\large Tunja}\\
+    {\large \the\year}
+\end{titlepage}
+
+\newpage
+
+\thispagestyle{empty}
+\tableofcontents
+\newpage
+
+\setcounter{page}{1}
+
+\section{Introducción}
+Texto aquí...
+
+\section{Definición del Problema}
+
+\subsection{Antecedentes del Problema}
+
+La recolección de información en instituciones de educación superior ha experimentado una transición acelerada desde métodos analógicos hacia plataformas digitales~\cite{4, 5}. Sin embargo, la persistencia de bajas tasas de respuesta y elevadas tasas de deserción en formularios web estáticos ha motivado la exploración de interfaces conversacionales (chatbots) integradas en aplicaciones de mensajería instantánea como una alternativa para optimizar la participación estudiantil~\cite{1, 2, 3, 4, 5}.
+
+\subsubsection*{Antecedentes de Efectividad Comparativa (Chatbots vs. Formularios Web)}
+
+\begin{itemize}
+    \item \textbf{Xiao et al. (2020):} Desarrollaron un estudio de campo con cerca de 600 participantes con el fin de evaluar la recolección de datos en encuestas conversacionales administradas por un chatbot impulsado por inteligencia artificial frente a un formulario web tradicional~\cite{2, 3, 4, 5}. Los autores hallaron que la tasa de finalización obtenida en la modalidad de chatbot conversacional alcanzó el 54\%, superando a más del doble la registrada en el formulario web estático, la cual fue del 24.2\%~\cite{2, 3, 4, 5}. Este antecedente demuestra empíricamente que la interacción guiada pregunta a pregunta incrementa el compromiso del participante~\cite{2, 3, 4, 5}.
+    
+    \item \textbf{Beam (2023):} Evaluó experimentalmente la efectividad de las redes sociales y agentes conversacionales como herramientas de reclutamiento y recolección de información~\cite{2, 3, 4, 5}. Mediante un diseño experimental aleatorizado aplicado a encuestas docentes, el estudio demostró que los chatbots alcanzaron tasas de respuesta y una calidad de datos significativamente superiores en comparación con los formularios web estáticos convencionales~\cite{2, 3, 4, 5}.
+    
+    \item \textbf{Zarouali, Araujo y Ohme (2023):} Llevaron a cabo una investigación longitudinal comparando el comportamiento de respuesta, la calidad de datos y la evaluación de usuario entre chatbots y encuestas web~\cite{2, 3, 4, 5}. A diferencia de los hallazgos de Xiao et al. y Beam, esta investigación no encontró ventajas estadísticamente significativas en el uso del chatbot frente al formulario tradicional en el tiempo, e incluso registró una disminución en la valoración favorable por parte de los usuarios en mediciones repetidas~\cite{2, 3, 4, 5}. Este resultado evidencia la falta de consenso en la comunidad científica y la necesidad de evitar asumir resultados de antemano sin una contrastación local~\cite{2, 3, 4, 5}.
+\end{itemize}
+
+\subsubsection*{Antecedentes sobre Diseño de Interacción y Usabilidad}
+
+\begin{itemize}
+    \item \textbf{Kim, Lee y Gweon (2019):} Analizaron el impacto de la plataforma y el estilo conversacional sobre la calidad de las respuestas en encuestas en línea~\cite{2, 3, 4, 5}. Los autores concluyeron que los formularios web tradicionales operan como sistemas receptores pasivos que no confirman en tiempo real la recepción de datos~\cite{2, 3, 4, 5}. Esta estructura estática entra en conflicto directo con las expectativas de interactividad inmediata que poseen los usuarios habituados al entorno digital de la mensajería instantánea~\cite{2, 3, 4, 5}.
+    
+    \item \textbf{Hoerger (2010):} Investigó el abandono de participantes como una función de la longitud del cuestionario en encuestas universitarias administradas por Internet~\cite{2, 3, 4, 5}. La evidencia cuantitativa demostró que aproximadamente el 10\% de los estudiantes abandona la prueba casi de manera instantánea al percibir la extensión de la interfaz, y que la tasa de deserción incrementa cerca de 2 puntos porcentuales adicionales por cada 100 preguntas agregadas al instrumento~\cite{2, 3, 4, 5}.
+    
+    \item \textbf{Nielsen y Molich (1990):} Establecieron las bases conceptuales para la evaluación heurística de interfaces de usuario~\cite{2, 3, 4, 5}. Sus principios de usabilidad explican de qué manera la ausencia de retroalimentación en tiempo real, la falta de visibilidad del estado del sistema y la carencia de indicadores de progreso en formularios estáticos generan fricción cognitiva y propician el abandono prematuro por parte del usuario~\cite{2, 3, 4, 5}.
+\end{itemize}
+
+\subsubsection*{Antecedentes sobre Canales de Comunicación Estudiantil}
+
+\begin{itemize}
+    \item \textbf{Harley, Winn, Pemberton y Wilcox (2007):} Analizaron el uso de la mensajería móvil para apoyar la transición y comunicación de los estudiantes en el ámbito universitario~\cite{2, 3, 4, 5}. Los resultados revelaron que la comunidad estudiantil asigna una prioridad superior y una revisión continua a las aplicaciones de mensajería instantánea frente a los canales formales e institucionales como el correo electrónico, en los cuales las notificaciones tienden a ser ignoradas o postergadas~\cite{2, 3, 4, 5}.
+\end{itemize}
+
+\subsubsection*{Fundamentación Metodológica y Validez Muestral}
+
+\begin{itemize}
+    \item \textbf{Hernández-Sampieri, Fernández-Collado y Baptista-Lucio (2014):} Abordan los principios de la metodología cuantitativa y la representatividad muestral~\cite{2, 3, 4, 5}. Sostienen que cuando un instrumento de recolección de datos sufre una alta tasa de deserción no aleatoria, se genera un sesgo de selección que compromete la validez externa de los resultados, impidiendo que la muestra obtenida represente adecuadamente a la población de estudio~\cite{2, 3, 4, 5}.
+\end{itemize}
+
+\subsubsection*{Síntesis y Brecha de Investigación (\emph{Research Gap})}
+
+La revisión de la literatura evidencia la existencia de un debate abierto en el ámbito académico internacional~\cite{4, 5}:
+\begin{enumerate}
+    \item Por un lado, estudios empíricos respaldan que los chatbots conversacionales incrementan la tasa de finalización y la calidad de datos al adaptarse al canal cotidiano del usuario (Xiao et al., 2020; Beam, 2023)~\cite{2, 3, 4, 5}.
+    \item Por otro lado, estudios longitudinales advierten que los chatbots no siempre superan a las encuestas web e incluso pueden generar desgaste (Zarouali et al., 2023)~\cite{2, 3, 4, 5}.
+\end{enumerate}
+
+Esta contradicción teórica justifica la necesidad de ejecutar un experimento comparativo aplicado al contexto particular de la Universidad Pedagógica y Tecnológica de Colombia (UPTC)~\cite{2, 3, 4, 5}. La investigación busca determinar si la implementación de un chatbot conversacional en Telegram logra superar la brecha del canal y la fricción de usabilidad que actualmente afectan a los formularios web institucionales~\cite{1, 2, 3, 4}.
+
+\subsection{Descripción del Problema}
+Texto aquí...
+
+\subsection{Formulación del Problema}
+Texto aquí...
+
+\section{Justificación}
+Texto aquí...
+
+\section{Objetivos}
+\subsection{Objetivo General}
+Texto aquí...
+
+\subsection{Objetivos Específicos}
+Texto aquí...
+
+\section{Marco Referencial}
+
+\subsection{Marco Teórico Conceptual}
+
+\subsubsection{Pruebas de Software}
+Texto aquí...
+
+\subsubsection{Automatización de Pruebas}
+Texto aquí...
+
+\subsubsection{Priorización de Pruebas}
+Texto aquí...
+
+\subsection{Marco Histórico}
+Texto aquí...
+
+\subsection{Estado Actual del Tema}
+Texto aquí...
+
+\subsection{Marco Científico y Tecnológico}
+
+\subsubsection{Fundamentos Científicos}
+Texto aquí...
+
+\subsubsection{Tecnologías Relevantes}
+Texto aquí...
+
+\subsection{Marco Legal y Normativo}
+Texto aquí... 
+
+\printbibliography[title={Bibliografía}]
+
+\end{document}
