@@ -57,46 +57,37 @@
 
 \setcounter{page}{1}
 
-\section{Introducción}
 Texto aquí...
 
-\section{Definición del Problema}
+\section{Planteamiento del Problema}
 
-\subsection{Antecedentes del Problema}
+\subsection{Antecedentes}
 
 La recolección de información en instituciones de educación superior ha experimentado una transición acelerada desde métodos analógicos hacia plataformas digitales~\cite{4, 5}. Sin embargo, la persistencia de bajas tasas de respuesta y elevadas tasas de deserción en formularios web estáticos ha motivado la exploración de interfaces conversacionales (chatbots) integradas en aplicaciones de mensajería instantánea como una alternativa para optimizar la participación estudiantil~\cite{1, 2, 3, 4, 5}.
 
 \subsubsection*{Antecedentes de Efectividad Comparativa (Chatbots vs. Formularios Web)}
 
-\begin{itemize}
-    \item \textbf{Xiao et al. (2020):} Desarrollaron un estudio de campo con cerca de 600 participantes con el fin de evaluar la recolección de datos en encuestas conversacionales administradas por un chatbot impulsado por inteligencia artificial frente a un formulario web tradicional~\cite{2, 3, 4, 5}. Los autores hallaron que la tasa de finalización obtenida en la modalidad de chatbot conversacional alcanzó el 54\%, superando a más del doble la registrada en el formulario web estático, la cual fue del 24.2\%~\cite{2, 3, 4, 5}. Este antecedente demuestra empíricamente que la interacción guiada pregunta a pregunta incrementa el compromiso del participante~\cite{2, 3, 4, 5}.
-    
-    \item \textbf{Beam (2023):} Evaluó experimentalmente la efectividad de las redes sociales y agentes conversacionales como herramientas de reclutamiento y recolección de información~\cite{2, 3, 4, 5}. Mediante un diseño experimental aleatorizado aplicado a encuestas docentes, el estudio demostró que los chatbots alcanzaron tasas de respuesta y una calidad de datos significativamente superiores en comparación con los formularios web estáticos convencionales~\cite{2, 3, 4, 5}.
-    
-    \item \textbf{Zarouali, Araujo y Ohme (2023):} Llevaron a cabo una investigación longitudinal comparando el comportamiento de respuesta, la calidad de datos y la evaluación de usuario entre chatbots y encuestas web~\cite{2, 3, 4, 5}. A diferencia de los hallazgos de Xiao et al. y Beam, esta investigación no encontró ventajas estadísticamente significativas en el uso del chatbot frente al formulario tradicional en el tiempo, e incluso registró una disminución en la valoración favorable por parte de los usuarios en mediciones repetidas~\cite{2, 3, 4, 5}. Este resultado evidencia la falta de consenso en la comunidad científica y la necesidad de evitar asumir resultados de antemano sin una contrastación local~\cite{2, 3, 4, 5}.
-\end{itemize}
+\textbf{Xiao et al. (2020)} desarrollaron un estudio de campo con cerca de 600 participantes con el fin de evaluar la recolección de datos en encuestas conversacionales administradas por un chatbot impulsado por inteligencia artificial frente a un formulario web tradicional~\cite{2, 3, 4, 5}. Los autores hallaron que la tasa de finalización obtenida en la modalidad de chatbot conversacional alcanzó el 54\%, superando a más del doble la registrada en el formulario web estático, la cual fue del 24.2\%~\cite{2, 3, 4, 5}. Este antecedente demuestra empíricamente que la interacción guiada pregunta a pregunta incrementa el compromiso del participante~\cite{2, 3, 4, 5}.
+
+Por su parte, \textbf{Beam (2023)} evaluó experimentalmente la efectividad de las redes sociales y agentes conversacionales como herramientas de reclutamiento y recolección de información~\cite{2, 3, 4, 5}. Mediante un diseño experimental aleatorizado aplicado a encuestas docentes, el estudio demostró que los chatbots alcanzaron tasas de respuesta y una calidad de datos significativamente superiores en comparación con los formularios web estáticos convencionales~\cite{2, 3, 4, 5}.
+
+Sin embargo, \textbf{Zarouali, Araujo y Ohme (2023)} llevaron a cabo una investigación longitudinal comparando el comportamiento de respuesta, la calidad de datos y la evaluación de usuario entre chatbots y encuestas web~\cite{2, 3, 4, 5}. A diferencia de los hallazgos de Xiao et al. y Beam, esta investigación no encontró ventajas estadísticamente significativas en el uso del chatbot frente al formulario tradicional en el tiempo, e incluso registró una disminución en la valoración favorable por parte de los usuarios en mediciones repetidas~\cite{2, 3, 4, 5}. Este resultado evidencia la falta de consenso en la comunidad científica y la necesidad de evitar asumir resultados de antemano sin una contrastación local~\cite{2, 3, 4, 5}.
 
 \subsubsection*{Antecedentes sobre Diseño de Interacción y Usabilidad}
 
-\begin{itemize}
-    \item \textbf{Kim, Lee y Gweon (2019):} Analizaron el impacto de la plataforma y el estilo conversacional sobre la calidad de las respuestas en encuestas en línea~\cite{2, 3, 4, 5}. Los autores concluyeron que los formularios web tradicionales operan como sistemas receptores pasivos que no confirman en tiempo real la recepción de datos~\cite{2, 3, 4, 5}. Esta estructura estática entra en conflicto directo con las expectativas de interactividad inmediata que poseen los usuarios habituados al entorno digital de la mensajería instantánea~\cite{2, 3, 4, 5}.
-    
-    \item \textbf{Hoerger (2010):} Investigó el abandono de participantes como una función de la longitud del cuestionario en encuestas universitarias administradas por Internet~\cite{2, 3, 4, 5}. La evidencia cuantitativa demostró que aproximadamente el 10\% de los estudiantes abandona la prueba casi de manera instantánea al percibir la extensión de la interfaz, y que la tasa de deserción incrementa cerca de 2 puntos porcentuales adicionales por cada 100 preguntas agregadas al instrumento~\cite{2, 3, 4, 5}.
-    
-    \item \textbf{Nielsen y Molich (1990):} Establecieron las bases conceptuales para la evaluación heurística de interfaces de usuario~\cite{2, 3, 4, 5}. Sus principios de usabilidad explican de qué manera la ausencia de retroalimentación en tiempo real, la falta de visibilidad del estado del sistema y la carencia de indicadores de progreso en formularios estáticos generan fricción cognitiva y propician el abandono prematuro por parte del usuario~\cite{2, 3, 4, 5}.
-\end{itemize}
+\textbf{Kim, Lee y Gweon (2019)} analizaron el impacto de la plataforma y el estilo conversacional sobre la calidad de las respuestas en encuestas en línea~\cite{2, 3, 4, 5}. Los autores concluyeron que los formularios web tradicionales operan como sistemas receptores pasivos que no confirman en tiempo real la recepción de datos~\cite{2, 3, 4, 5}. Esta estructura estática entra en conflicto directo con las expectativas de interactividad inmediata que poseen los usuarios habituados al entorno digital de la mensajería instantánea~\cite{2, 3, 4, 5}.
+
+De manera similar, \textbf{Hoerger (2010)} investigó el abandono de participantes como una función de la longitud del cuestionario en encuestas universitarias administradas por Internet~\cite{2, 3, 4, 5}. La evidencia cuantitativa demostró que aproximadamente el 10\% de los estudiantes abandona la prueba casi de manera instantánea al percibir la extensión de la interfaz, y que la tasa de deserción incrementa cerca de 2 puntos porcentuales adicionales por cada 100 preguntas agregadas al instrumento~\cite{2, 3, 4, 5}.
+
+En la misma línea, \textbf{Nielsen y Molich (1990)} establecieron las bases conceptuales para la evaluación heurística de interfaces de usuario~\cite{2, 3, 4, 5}. Sus principios de usabilidad explican de qué manera la ausencia de retroalimentación en tiempo real, la falta de visibilidad del estado del sistema y la carencia de indicadores de progreso en formularios estáticos generan fricción cognitiva y propician el abandono prematuro por parte del usuario~\cite{2, 3, 4, 5}.
 
 \subsubsection*{Antecedentes sobre Canales de Comunicación Estudiantil}
 
-\begin{itemize}
-    \item \textbf{Harley, Winn, Pemberton y Wilcox (2007):} Analizaron el uso de la mensajería móvil para apoyar la transición y comunicación de los estudiantes en el ámbito universitario~\cite{2, 3, 4, 5}. Los resultados revelaron que la comunidad estudiantil asigna una prioridad superior y una revisión continua a las aplicaciones de mensajería instantánea frente a los canales formales e institucionales como el correo electrónico, en los cuales las notificaciones tienden a ser ignoradas o postergadas~\cite{2, 3, 4, 5}.
-\end{itemize}
+En esta misma dirección, \textbf{Harley, Winn, Pemberton y Wilcox (2007)} analizaron el uso de la mensajería móvil para apoyar la transición y comunicación de los estudiantes en el ámbito universitario~\cite{2, 3, 4, 5}. Sus resultados revelaron que la comunidad estudiantil asigna una prioridad superior y una revisión continua a las aplicaciones de mensajería instantánea frente a los canales formales e institucionales como el correo electrónico, en los cuales las notificaciones tienden a ser ignoradas o postergadas~\cite{2, 3, 4, 5}.
 
 \subsubsection*{Fundamentación Metodológica y Validez Muestral}
 
-\begin{itemize}
-    \item \textbf{Hernández-Sampieri, Fernández-Collado y Baptista-Lucio (2014):} Abordan los principios de la metodología cuantitativa y la representatividad muestral~\cite{2, 3, 4, 5}. Sostienen que cuando un instrumento de recolección de datos sufre una alta tasa de deserción no aleatoria, se genera un sesgo de selección que compromete la validez externa de los resultados, impidiendo que la muestra obtenida represente adecuadamente a la población de estudio~\cite{2, 3, 4, 5}.
-\end{itemize}
+Desde una perspectiva metodológica, \textbf{Hernández-Sampieri, Fernández-Collado y Baptista-Lucio (2014)} abordan los principios de la metodología cuantitativa y la representatividad muestral~\cite{2, 3, 4, 5}, y sostienen que cuando un instrumento de recolección de datos sufre una alta tasa de deserción no aleatoria, se genera un sesgo de selección que compromete la validez externa de los resultados, impidiendo que la muestra obtenida represente adecuadamente a la población de estudio~\cite{2, 3, 4, 5}.
 
 \subsubsection*{Síntesis y Brecha de Investigación (\emph{Research Gap})}
 
@@ -108,10 +99,16 @@ La revisión de la literatura evidencia la existencia de un debate abierto en el
 
 Esta contradicción teórica justifica la necesidad de ejecutar un experimento comparativo aplicado al contexto particular de la Universidad Pedagógica y Tecnológica de Colombia (UPTC)~\cite{2, 3, 4, 5}. La investigación busca determinar si la implementación de un chatbot conversacional en Telegram logra superar la brecha del canal y la fricción de usabilidad que actualmente afectan a los formularios web institucionales~\cite{1, 2, 3, 4}.
 
-\subsection{Descripción del Problema}
+\subsection{Descripción de la Situación Problemática}
 Texto aquí...
 
 \subsection{Formulación del Problema}
+Texto aquí...
+
+\subsection{Consecuencias de no Investigar}
+Texto aquí...
+
+\subsection{Delimitación}
 Texto aquí...
 
 \section{Justificación}
@@ -122,6 +119,15 @@ Texto aquí...
 Texto aquí...
 
 \subsection{Objetivos Específicos}
+Texto aquí...
+
+\section{Alcance de la Investigación}
+Texto aquí...
+
+\section{Formulación de Hipótesis}
+Texto aquí...
+
+\section{Variables}
 Texto aquí...
 
 \section{Marco Referencial}
@@ -154,6 +160,18 @@ Texto aquí...
 \subsection{Marco Legal y Normativo}
 Texto aquí... 
 
+\section{Diseño Metodológico}
+Texto aquí...
+
+\section{Resultados y Discusión}
+Texto aquí...
+
+\section{Conclusiones y Recomendaciones}
+Texto aquí...
+
 \printbibliography[title={Bibliografía}]
+
+\section*{Anexos}
+Texto aquí...
 
 \end{document}
