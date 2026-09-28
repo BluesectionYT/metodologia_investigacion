@@ -3,6 +3,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{csquotes} %
 
 \usepackage[
     top=3cm,
@@ -96,8 +98,21 @@ Esta tensión teórica fundamenta la necesidad de ejecutar un experimento compar
 \subsection{Descripción de la situación problemática}
 Para el periodo 2025--2026, la UPTC depende únicamente del correo institucional y de formularios web estáticos para realizar sus encuestas. Debido a que la mayor parte de los estudiantes utiliza habitualmente servicios de mensajería instantánea, el envío de formularios extensos es ignorado por un amplio sector estudiantil o abandonado a mitad del proceso, al ser percibido como un trámite rígido u obligatorio más que como un espacio de participación.
 
-\subsection{Formulacion del problema}
-Texto aqui...
+\subsection{Formulación del Problema}
+
+Con base en el diagnóstico y la situación problemática identificada en la UPTC, se plantea la siguiente pregunta central de investigación:
+
+\begin{quote}
+¿En qué medida la implementación de un chatbot conversacional e interactivo en Telegram influye en la tasa de finalización, el tiempo de respuesta y la usabilidad percibida en la recolección de datos estudiantiles en la UPTC, en comparación con los formularios web estáticos tradicionales?
+\end{quote}
+
+Para abordar de manera integral esta interrogante central, el problema se desglosa en las siguientes preguntas específicas:
+
+\begin{enumerate}
+    \item ¿Cómo debe diseñarse y desarrollarse un prototipo de chatbot conversacional en Telegram, integrado con Python, para la administración efectiva de instrumentos de recolección de datos en la UPTC?
+    \item ¿Existen diferencias estadísticamente significativas en la tasa de finalización, la tasa de abandono y el tiempo de respuesta entre la recolección mediante el chatbot conversacional y el formulario web tradicional?
+    \item ¿Cuál es la evaluación de los estudiantes sobre la usabilidad percibida, la carga cognitiva y la experiencia de usuario al interactuar con la interfaz conversacional en comparación con la interfaz web estática?
+\end{enumerate}
 
 \subsection{Consecuencias de no Investigar}
 De mantenerse esta tendencia durante el periodo 2026--2027, el abstencionismo estudiantil en los procesos de consulta de la UPTC se profundizará. Como consecuencia, las decisiones administrativas, académicas y de bienestar institucional se seguirán formulando a partir de muestras reducidas e irrepresentativas (con tasas de participación inferiores al 23\% registrado a nivel global), perpetuando el sesgo en la evaluación docente y distorsionando la asignación de recursos hacia proyectos que no reflejan las necesidades reales de la comunidad universitaria.
@@ -106,7 +121,19 @@ De mantenerse esta tendencia durante el periodo 2026--2027, el abstencionismo es
 Para mitigar esta problemática, se propone el diseño y evaluación experimental de un chatbot conversacional e interactivo en Telegram (desarrollado en Python) para la aplicación de encuestas institucionales. El objetivo es determinar si la integración de una plataforma de uso cotidiano reduce la fricción de interfaz, incrementa la tasa de respuesta y finalización, y disminuye el tiempo de diligenciamiento en comparación con los formularios web tradicionales.
 
 \section{Justificación}
-Texto aquí...
+
+La realización de este proyecto de investigación se fundamenta en la necesidad de abordar los bajos índices de participación estudiantil en la recolección de información institucional dentro de la Universidad Pedagógica y Tecnológica de Colombia (UPTC). A continuación, se detallan las razones teóricas, metodológicas, prácticas y tecnológicas que justifican la ejecución de este estudio:
+\paragraph{Justificación Teórica}
+En la literatura especializada existe una controversia activa sobre la efectividad de los agentes conversacionales frente a los formularios estáticos. Mientras que diversas investigaciones afirman que las interfaces conversacionales incrementan significativamente las tasas de respuesta, otros estudios reportan la ausencia de ventajas estadísticamente significativas o incluso un incremento en la dificultad de navegación. Esta investigación aporta evidencia empírica cuantitativa obtenida directamente en el contexto universitario colombiano, enriqueciendo el cuerpo de conocimiento sobre interacción humano-computador y comunicación digital institucional en América Latina.
+
+\paragraph{Justificación Metodológica}
+El proyecto propone un diseño experimental riguroso para comparar objetivamente dos canales de interacción digital bajo condiciones reales de uso. Mediante la medición estandarizada de métricas objetivas de rendimiento (tiempo de diligenciamiento y tasa de finalización) y la evaluación de la usabilidad percibida (mediante escalas validadas como SUS o UEQ), se establece un marco evaluativo replicable para la validación de interfaces conversacionales en el área de la ingeniería de software.
+
+\paragraph{Justificación Práctica e Institucional}
+A nivel institucional, la UPTC requiere superar la dependencia de canales pasivos y poco efectivos que generan sesgos de selección en las evaluaciones docentes, estudios de bienestar y diagnósticos académicos. La implementación de un mecanismo interactivo ajustado a los hábitos digitales cotidianos de la población estudiantil fortalece los canales de escucha activa, fomenta la participación universitaria y proporciona a las directivas datos más representativos para la toma de decisiones.
+
+\paragraph{Justificación Tecnológica}
+Desde la perspectiva de la Ingeniería de Sistemas, este trabajo demuestra la viabilidad técnica y operativa de integrar la API de Telegram con entornos de desarrollo en Python para construir asistentes de captura de datos ligeros, multiplataforma, de bajo costo y fácil mantenimiento, reduciendo la fricción asociada al uso de aplicaciones propietarias o formularios web extensos.
 
 \section{Objetivos}
 \subsection{Objetivo General}
@@ -122,7 +149,53 @@ Texto aquí...
 Texto aquí...
 
 \section{Variables}
-Texto aquí...
+
+En el marco del diseño experimental planteado, las variables de estudio se clasifican según su función dentro de la investigación y se definen conceptual y operacionalmente a continuación:
+
+\subsection{Variable Independiente (VI)}
+
+\begin{itemize}
+    \item \textbf{Tipo de interfaz de recolección de datos:} Medio o canal digital mediante el cual el participante interactúa para responder el cuestionario institucional. Esta variable se manipula en dos niveles de tratamiento:
+    \begin{itemize}
+        \item \textit{Tratamiento experimental:} Interfaz conversacional e interactiva administrada por un chatbot en Telegram (desarrollado en Python).
+        \item \textit{Tratamiento de control:} Interfaz web estática tradicional (formulario web convencional).
+    \end{itemize}
+\end{itemize}
+
+\subsection{Variables Dependientes (VD)}
+
+\begin{itemize}
+    \item \textbf{Tasa de finalización ($VD_1$):} Porcentaje de participantes que completan y envían la totalidad del cuestionario con respecto al total de personas que inician la interacción.
+    \item \textbf{Tiempo de diligenciamiento ($VD_2$):} Duración total, medida en segundos, desde el instante en que el participante inicia la primera pregunta hasta la confirmación de envío final.
+    \item \textbf{Usabilidad percibida ($VD_3$):} Grado de facilidad de uso, eficiencia y satisfacción del usuario al interactuar con el sistema, evaluado formalmente a través de la escala estandarizada \textit{System Usability Scale} (SUS).
+    \item \textbf{Tasa de abandono o deserción ($VD_4$):} Porcentaje de participantes que abandonan el flujo de interacción antes de responder la última pregunta o que dejan ítems obligatorios incompletos.
+\end{itemize}
+
+\subsection{Variables de Control y Extrañas}
+
+\begin{itemize}
+    \item \textbf{Contenido y extensión del instrumento:} Se garantiza que el número de preguntas, la redacción, las opciones de respuesta y el nivel de complejidad sean idénticos en ambos tratamientos.
+    \item \textbf{Perfil demográfico de los participantes:} Estudiantes matriculados en la Facultad de Ingeniería de la UPTC, asegurando relativa homogeneidad en competencias digitales previas.
+    \item \textbf{Dispositivo de acceso:} Registro del tipo de hardware empleado (dispositivo móvil o computador de escritorio) para controlar y analizar posibles sesgos en la velocidad de respuesta.
+\end{itemize}
+
+\subsection{Matriz de Operacionalización de Variables}
+
+\begin{table}[htbp]
+\centering
+\caption{Matriz de Operacionalización de Variables}
+\label{tab:operacionalizacion}
+\small
+\begin{tabular}{|p{3cm}|p{3.5cm}|p{3.5cm}|p{2.5cm}|p{2.5cm}|}
+\hline
+\textbf{Variable} & \textbf{Definición Conceptual} & \textbf{Indicador} & \textbf{Escala de Medición} & \textbf{Instrumento / Fuente} \\ \hline
+\textbf{Tipo de Interfaz (VI)} & Canal digital empleado para la captura de información. & Tipo de tratamiento asignado (Chatbot vs. Formulario Web). & Nominal / Categórica & Registro del sistema / Logs \\ \hline
+\textbf{Tasa de Finalización ($VD_1$)} & Proporción de encuestas respondidas en su totalidad. & $\frac{\text{Encuestas completas}}{\text{Total iniciadas}} \times 100$ & Razón / Porcentaje (\%) & Logs del servidor / Base de datos \\ \hline
+\textbf{Tiempo de Respuesta ($VD_2$)} & Tiempo invertido en diligenciar el cuestionario. & $t_{\text{final}} - t_{\text{inicio}}$ (segundos) & Razón / Continua & Registros de tiempo (\textit{timestamps}) \\ \hline
+\textbf{Usabilidad Percibida ($VD_3$)} & Grado de facilidad y satisfacción de uso. & Puntaje global SUS (Escala de 0 a 100). & Intervalo & Cuestionario SUS post-prueba \\ \hline
+\textbf{Tasa de Abandono ($VD_4$)} & Deserción prematura antes de completar la prueba. & $\frac{\text{Sesiones abandonadas}}{\text{Total iniciadas}} \times 100$ & Razón / Porcentaje (\%) & Logs de interacción \\ \hline
+\end{tabular}
+\end{table}
 
 \section{Marco Referencial}
 
