@@ -225,6 +225,39 @@ En el marco del diseño experimental planteado, las variables de estudio se clas
 
 \subsection{Marco Teórico Conceptual}
 
+Este apartado define los conceptos centrales que orientan el estudio y que se emplean de manera consistente en las secciones siguientes.
+ 
+\subsubsection{Chatbot y Bot de Telegram}
+ 
+Un chatbot, también denominado agente conversacional o sistema de diálogo en lenguaje natural, es un programa diseñado para sostener una conversación con un usuario \cite{adamopoulou2020}. Su implementación se apoya principalmente en dos aproximaciones: la coincidencia de patrones y el aprendizaje automático \cite{adamopoulou2020}. En este estudio, el chatbot cumple una función de administración de instrumentos: formula las preguntas una a una y recibe las respuestas del estudiante dentro de una conversación, en lugar de presentarlas en una única página.
+ 
+Un bot de Telegram es una cuenta de la plataforma operada por software y no por una persona, que se controla mediante una interfaz de programación (Bot API) accesible por HTTPS y autenticada con una clave generada a través de @BotFather \cite{telegram2015}. Esta es la definición que se adopta para el prototipo que se desarrollará en Python.
+
+\subsubsection{Encuesta Conversacional y Formulario Web}
+ 
+El formulario web es un instrumento de encuesta autoadministrado en el que el participante diligencia las preguntas en una página o en una secuencia de pantallas y luego las envía \cite{couper2000}. En este estudio se denomina formulario web estático porque, tal como lo describen Kim et al. \cite{kim2019}, opera como un receptor pasivo que no confirma en tiempo real la recepción de cada dato.
+ 
+La encuesta conversacional, en cambio, administra las preguntas mediante un diálogo con un agente: el instrumento se presenta pregunta a pregunta y el sistema reacciona a cada respuesta \cite{kim2019, xiao2020}. En el diseño propuesto, el contenido, la redacción y la extensión del cuestionario son idénticos en ambos canales (véase la sección de Variables), de modo que lo que cambia es la interfaz y no el instrumento.
+ 
+\subsubsection{Indicadores de Desempeño de la Recolección de Datos}
+ 
+Para comparar los dos canales se emplean cuatro indicadores, definidos de la misma manera en la operacionalización de variables:
+ 
+\begin{itemize}
+    \item \textbf{Tasa de respuesta:} porcentaje de estudiantes invitados que respondió la encuesta.
+    \item \textbf{Tasa de finalización:} porcentaje de encuestas completadas con respecto al total de las iniciadas.
+    \item \textbf{Tasa de abandono o deserción:} porcentaje de sesiones iniciadas que se interrumpen antes de responder la última pregunta \cite{hoerger2010}.
+    \item \textbf{Tiempo de diligenciamiento:} duración, en segundos, entre la primera pregunta y la confirmación de envío.
+\end{itemize}
+ 
+Estos indicadores se relacionan con la calidad de la muestra: una alta deserción no aleatoria genera un sesgo de selección que compromete la validez externa de los resultados \cite{hernandez2014}.
+ 
+\subsubsection{Usabilidad Percibida y Fricción de Interfaz}
+ 
+La usabilidad de una herramienta debe entenderse en relación con el contexto en el que se usa y con su adecuación a él, e involucra la efectividad, la eficiencia y la satisfacción del usuario \cite{brooke1996}. En este estudio se mide mediante la \textit{System Usability Scale} (SUS), un cuestionario de diez ítems con respuestas tipo Likert de cinco puntos que produce un índice global entre 0 y 100 \cite{brooke1996}.
+ 
+La fricción de interfaz se entiende como el conjunto de obstáculos que el usuario encuentra al interactuar con el instrumento, entre ellos la falta de retroalimentación inmediata, la escasa visibilidad del estado del sistema y la ausencia de indicadores de progreso, que son principios de la evaluación heurística de interfaces \cite{nielsen1990}.
+
 \subsubsection{Pruebas de Software}
 Texto aquí...
 
@@ -235,7 +268,24 @@ Texto aquí...
 Texto aquí...
 
 \subsection{Marco Histórico}
-Texto aquí...
+
+\subsubsection{De la Encuesta Tradicional a la Encuesta Web}
+ 
+Hacia finales de la década de 1990 y comienzos de la de 2000, la expansión de Internet llevó a que las encuestas web se discutieran como una alternativa, e incluso como un posible sustituto, de los métodos tradicionales de recolección de datos \cite{couper2000}. La literatura posterior se ocupó de problemas propios del nuevo medio, como la deserción de participantes en función de la longitud del cuestionario en estudios universitarios administrados por Internet \cite{hoerger2010}.
+ 
+\subsubsection{De ELIZA a los Chatbots en Aplicaciones de Mensajería}
+ 
+En 1966, Weizenbaum describió ELIZA, un programa ejecutado en el sistema de tiempo compartido MAC del MIT que hacía posibles ciertas formas de conversación en lenguaje natural entre una persona y un computador, analizando las frases de entrada mediante reglas de descomposición activadas por palabras clave y generando las respuestas con reglas de reensamblaje \cite{weizenbaum1966}. ELIZA y, posteriormente, ALICE se consideran los primeros chatbots desarrollados con algoritmos de reconocimiento de patrones, y a comienzos de la década de 2000 aparecieron chatbots como SmarterChild, en 2001, disponibles a través de aplicaciones de mensajería \cite{adamopoulou2020overview}. La evolución posterior, desde la idea generativa hasta el aprendizaje automático, junto con las debilidades de cada etapa, es revisada por Adamopoulou y Moussiades \cite{adamopoulou2020}.
+ 
+\subsubsection{Telegram y su Plataforma de Bots}
+ 
+El 24 de junio de 2015, el equipo de Telegram anunció el lanzamiento de una Bot API y de una plataforma para que desarrolladores externos crearan bots, definidos como cuentas operadas por software; según el anuncio, configurar un bot requería generar una clave con @BotFather y emplear una API HTTPS sencilla \cite{telegram2015}. Este hito hace técnicamente viable el prototipo propuesto: un agente conversacional alojado en una aplicación de mensajería de uso cotidiano y desarrollado en Python. Pese a ello, su uso institucional en universidades de habla hispana sigue siendo limitado y mayormente unidireccional \cite{cisternas2022}.
+ 
+\subsubsection{Encuestas Conversacionales y Medición de la Usabilidad}
+ 
+En paralelo, la medición de la usabilidad percibida se estandarizó: Brooke publicó en 1996 la \textit{System Usability Scale} (SUS), presentada como una escala fiable y de bajo costo para valoraciones globales de usabilidad \cite{brooke1996}. Sobre ese trasfondo, una línea de investigación reciente ha comparado experimentalmente las encuestas conversacionales con los formularios web \cite{kim2019, xiao2020, beam2023, zarouali2023, devecifuchs2026}, cuyos hallazgos, incluidos los resultados divergentes, se discuten en los antecedentes de este documento.
+
+
 \subsection{Estado Actual del Tema}
  
 \subsubsection{Protocolo de Selección de Literatura (PRISMA Adaptado)}
