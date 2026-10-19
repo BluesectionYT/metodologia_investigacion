@@ -236,9 +236,30 @@ Texto aquí...
 
 \subsection{Marco Histórico}
 Texto aquí...
-
 \subsection{Estado Actual del Tema}
-Texto aquí...
+ 
+\subsubsection{Protocolo de Selección de Literatura (PRISMA Adaptado)}
+Para garantizar la transparencia y reproducibilidad de la revisión, se aplicó el protocolo PRISMA adaptado a la escala del proyecto, consultando las bases de datos IEEE Xplore, ACM Digital Library, Scopus y la Biblioteca Digital UPTC. Se ejecutaron ecuaciones de búsqueda booleanas con los términos: \texttt{("conversational survey" OR "chatbot survey") AND ("survey response rate" OR "survey completion rate") AND ("user friction")}.
+ 
+El flujo de selección sistemática se estructuró en cuatro fases:
+\begin{enumerate}
+    \item \textbf{Identificación:} Se obtuvieron 85 registros iniciales en las búsquedas en bases de datos.
+    \item \textbf{Cribado:} Se eliminaron 18 duplicados. Tras la lectura de títulos y resúmenes con los criterios de inclusión (publicaciones entre 2019 y 2026, evaluadas por pares y enfocadas en recolección de datos conversacional vs. web), se descartaron 35 artículos por salirse del ámbito académico universitario o tener una antigüedad mayor a 5 años.
+    \item \textbf{Elegibilidad:} Se evaluó el texto completo de 32 estudios, excluyendo 21 por evaluar únicamente chatbots comerciales de servicio al cliente o carecer de métricas cuantitativas comparables.
+    \item \textbf{Incluidos:} Se seleccionaron 11 estudios clave que constituyen el soporte de la síntesis comparativa.
+\end{enumerate}
+ 
+\subsubsection{Síntesis Comparativa por Sub-preguntas y Vacío de Conocimiento}
+ 
+\paragraph{1\. Sub-pregunta 1: Tasa de respuesta y finalización}
+La literatura reciente revela un contraste marcado en la efectividad de retención entre ambas interfaces. Xiao et al. \cite{xiao2020} desarrollaron un estudio comparativo directo con cerca de 600 participantes, encontrando que las encuestas gestionadas mediante chatbots conversacionales alcanzaron una tasa de finalización del 54\%, superando a más del doble la registrada por formularios web tradicionales (24.2\%). En consonancia, Beam \cite{beam2023} aplicó un diseño experimental aleatorizado en encuestas docentes universitarias y demostró que los agentes conversacionales logran tasas de respuesta y completitud de datos significativamente superiores. No obstante, Zarouali et al. \cite{zarouali2023} llevaron a cabo un estudio longitudinal comparando chatbots y encuestas en línea, reportando que las ventajas del chatbot disminuyen en mediciones repetidas y que no se observan diferencias estadísticamente significativas a largo plazo. Por su parte, el estudio de Hoerger \cite{hoerger2010} demostró cuantitativamente que los formularios web extensos sufren una deserción inmediata del 10\% en las primeras preguntas, la cual se incrementa en 2 puntos porcentuales por cada 100 preguntas adicionales.
+ 
+\paragraph{2\. Sub-pregunta 2: Experiencia de usuario, interactividad y reducción de fricción}
+Desde la perspectiva del diseño de interacción, Kim et al. \cite{kim2019} concluyeron que los formularios web actúan como receptores pasivos de información sin confirmación en tiempo real, lo que entra en conflicto con las expectativas de interactividad de los usuarios jóvenes. Araujo \cite{araujo2018} destacó que el estilo comunicativo y las señales antropomórficas del chatbot incrementan la percepción de calidez y compromiso en el usuario. En el ámbito institucional de la UPTC, Barón Salazar et al. \cite{baronsalazar2026} documentaron que la automatización conversacional reduce los tiempos de respuesta en un 99.81\% frente a procesos manuales. No obstante, Çavuşoğlu Deveci et al. \cite{cavusoglu2026} encontraron en un experimento con estudiantes universitarios que, aunque el chatbot fue percibido como más entretenido, la navegación no siempre resultó más veloz frente a la web.
+ 
+\paragraph{3\. Definición del Vacío de Conocimiento}
+Aunque la literatura internacional documenta experiencias comparativas entre chatbots y formularios en contextos comerciales o de salud \cite{tepas2020}, y estudios como el de Cisternas-Osorio et al. \cite{cisternas2022} señalan que Telegram es una herramienta subutilizada y predominantemente unidireccional en las universidades latinoamericanas, \textbf{persiste un vacío de evidencia empírica local en universidades públicas colombianas (como la UPTC)}. No existen estudios experimentales que evalúen si canalizar consultas institucionales semi-obligatorias (evaluación docente o bienestar) a través de un chatbot interactivo en Telegram logra mitigar el abstencionismo y la deserción en estudiantes de pregrado en comparación con el formulario web tradicional enviado por correo. Este es el vacío de conocimiento que aborda el presente proyecto.
+ 
 
 \subsection{Marco Científico y Tecnológico}
 
